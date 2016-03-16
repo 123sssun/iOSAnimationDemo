@@ -25,6 +25,7 @@
 		04F431101C990FA00033E4A3 /* BottomBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4310F1C990FA00033E4A3 /* BottomBarViewController.m */; };
 		04F431131C9911250033E4A3 /* RootTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F431121C9911250033E4A3 /* RootTableTableViewController.m */; };
 		04F431171C9954F40033E4A3 /* SmoothGestureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F431161C9954F40033E4A3 /* SmoothGestureController.m */; };
+		04F4311F1C9965BB0033E4A3 /* PullDownController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4311E1C9965BB0033E4A3 /* PullDownController.m */; };
 		8C17D80C1C992C840071FB43 /* TwitterMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80B1C992C840071FB43 /* TwitterMaskViewController.m */; };
 		8C17D80F1C992CEE0071FB43 /* MaskTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80E1C992CEE0071FB43 /* MaskTransitionViewController.m */; };
 /* End PBXBuildFile section */
@@ -83,6 +84,8 @@
 		04F431121C9911250033E4A3 /* RootTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableTableViewController.m; sourceTree = "<group>"; };
 		04F431151C9954F40033E4A3 /* SmoothGestureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothGestureController.h; sourceTree = "<group>"; };
 		04F431161C9954F40033E4A3 /* SmoothGestureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmoothGestureController.m; sourceTree = "<group>"; };
+		04F4311D1C9965BB0033E4A3 /* PullDownController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullDownController.h; sourceTree = "<group>"; };
+		04F4311E1C9965BB0033E4A3 /* PullDownController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullDownController.m; sourceTree = "<group>"; };
 		8C17D80A1C992C840071FB43 /* TwitterMaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterMaskViewController.h; sourceTree = "<group>"; };
 		8C17D80B1C992C840071FB43 /* TwitterMaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterMaskViewController.m; sourceTree = "<group>"; };
 		8C17D80D1C992CEE0071FB43 /* MaskTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskTransitionViewController.h; sourceTree = "<group>"; };
@@ -180,6 +183,7 @@
 		04F430EC1C990DD50033E4A3 /* Demos */ = {
 			isa = PBXGroup;
 			children = (
+				04F4311C1C9965A30033E4A3 /* PullDownController(下拉刷新) */,
 				04F431141C9954C40033E4A3 /* SmoothGesture(平滑手势) */,
 				04F4310D1C990F880033E4A3 /* BottomBarMenu(底部菜单) */,
 				04F430ED1C990DD50033E4A3 /* 3DCardImage(3D图片) */,
@@ -286,6 +290,15 @@
 				04F431161C9954F40033E4A3 /* SmoothGestureController.m */,
 			);
 			path = "SmoothGesture(平滑手势)";
+			sourceTree = "<group>";
+		};
+		04F4311C1C9965A30033E4A3 /* PullDownController(下拉刷新) */ = {
+			isa = PBXGroup;
+			children = (
+				04F4311D1C9965BB0033E4A3 /* PullDownController.h */,
+				04F4311E1C9965BB0033E4A3 /* PullDownController.m */,
+			);
+			path = "PullDownController(下拉刷新)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,6 +442,7 @@
 				04F431171C9954F40033E4A3 /* SmoothGestureController.m in Sources */,
 				04F430BE1C990A800033E4A3 /* AppDelegate.m in Sources */,
 				04F431001C990F070033E4A3 /* MaskViewController.m in Sources */,
+				04F4311F1C9965BB0033E4A3 /* PullDownController.m in Sources */,
 				04F430FD1C990EF50033E4A3 /* FireworkViewController.m in Sources */,
 				04F430FA1C990ED40033E4A3 /* DynamicSlideController.m in Sources */,
 				04F431131C9911250033E4A3 /* RootTableTableViewController.m in Sources */,
