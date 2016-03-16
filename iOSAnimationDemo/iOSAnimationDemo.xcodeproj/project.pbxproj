@@ -24,6 +24,8 @@
 		04F4310C1C990F530033E4A3 /* SnowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4310B1C990F530033E4A3 /* SnowViewController.m */; };
 		04F431101C990FA00033E4A3 /* BottomBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4310F1C990FA00033E4A3 /* BottomBarViewController.m */; };
 		04F431131C9911250033E4A3 /* RootTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F431121C9911250033E4A3 /* RootTableTableViewController.m */; };
+		8C17D80C1C992C840071FB43 /* TwitterMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80B1C992C840071FB43 /* TwitterMaskViewController.m */; };
+		8C17D80F1C992CEE0071FB43 /* MaskTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80E1C992CEE0071FB43 /* MaskTransitionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,10 @@
 		04F4310F1C990FA00033E4A3 /* BottomBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomBarViewController.m; sourceTree = "<group>"; };
 		04F431111C9911250033E4A3 /* RootTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableTableViewController.h; sourceTree = "<group>"; };
 		04F431121C9911250033E4A3 /* RootTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableTableViewController.m; sourceTree = "<group>"; };
+		8C17D80A1C992C840071FB43 /* TwitterMaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterMaskViewController.h; sourceTree = "<group>"; };
+		8C17D80B1C992C840071FB43 /* TwitterMaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterMaskViewController.m; sourceTree = "<group>"; };
+		8C17D80D1C992CEE0071FB43 /* MaskTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskTransitionViewController.h; sourceTree = "<group>"; };
+		8C17D80E1C992CEE0071FB43 /* MaskTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskTransitionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +222,10 @@
 			children = (
 				04F430FE1C990F070033E4A3 /* MaskViewController.h */,
 				04F430FF1C990F070033E4A3 /* MaskViewController.m */,
+				8C17D80A1C992C840071FB43 /* TwitterMaskViewController.h */,
+				8C17D80B1C992C840071FB43 /* TwitterMaskViewController.m */,
+				8C17D80D1C992CEE0071FB43 /* MaskTransitionViewController.h */,
+				8C17D80E1C992CEE0071FB43 /* MaskTransitionViewController.m */,
 			);
 			path = "MaskView(遮罩)";
 			sourceTree = "<group>";
@@ -399,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F431061C990F290033E4A3 /* RubberBallViewController.m in Sources */,
+				8C17D80F1C992CEE0071FB43 /* MaskTransitionViewController.m in Sources */,
 				04F430F71C990E9B0033E4A3 /* CardImageViewController.m in Sources */,
 				04F4310C1C990F530033E4A3 /* SnowViewController.m in Sources */,
 				04F431091C990F420033E4A3 /* SlideMenuViewController.m in Sources */,
@@ -407,6 +418,7 @@
 				04F430FD1C990EF50033E4A3 /* FireworkViewController.m in Sources */,
 				04F430FA1C990ED40033E4A3 /* DynamicSlideController.m in Sources */,
 				04F431131C9911250033E4A3 /* RootTableTableViewController.m in Sources */,
+				8C17D80C1C992C840071FB43 /* TwitterMaskViewController.m in Sources */,
 				04F431101C990FA00033E4A3 /* BottomBarViewController.m in Sources */,
 				04F430BB1C990A800033E4A3 /* main.m in Sources */,
 				04F431031C990F1B0033E4A3 /* ProgressViewController.m in Sources */,
@@ -633,6 +645,7 @@
 				04F430E51C990A810033E4A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04F430E61C990A810033E4A3 /* Build configuration list for PBXNativeTarget "iOSAnimationDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -641,6 +654,7 @@
 				04F430E81C990A810033E4A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04F430E91C990A810033E4A3 /* Build configuration list for PBXNativeTarget "iOSAnimationDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -649,6 +663,7 @@
 				04F430EB1C990A810033E4A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
