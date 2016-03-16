@@ -33,6 +33,7 @@ static NSString *cellIdentifier = @"reuseIdentifier";
                       @[@"加载进度", @"ProgressViewController"],
                       @[@"小皮球", @"RubberBallViewController"],
                       @[@"侧滑", @"SlideMenuViewController"],
+                      @[@"平滑手势", @"SmoothGestureController"],
                       @[@"粒子效果", @"SnowViewController"]];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];

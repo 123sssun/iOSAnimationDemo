@@ -24,6 +24,7 @@
 		04F4310C1C990F530033E4A3 /* SnowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4310B1C990F530033E4A3 /* SnowViewController.m */; };
 		04F431101C990FA00033E4A3 /* BottomBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4310F1C990FA00033E4A3 /* BottomBarViewController.m */; };
 		04F431131C9911250033E4A3 /* RootTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F431121C9911250033E4A3 /* RootTableTableViewController.m */; };
+		04F431171C9954F40033E4A3 /* SmoothGestureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F431161C9954F40033E4A3 /* SmoothGestureController.m */; };
 		8C17D80C1C992C840071FB43 /* TwitterMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80B1C992C840071FB43 /* TwitterMaskViewController.m */; };
 		8C17D80F1C992CEE0071FB43 /* MaskTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80E1C992CEE0071FB43 /* MaskTransitionViewController.m */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,8 @@
 		04F4310F1C990FA00033E4A3 /* BottomBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomBarViewController.m; sourceTree = "<group>"; };
 		04F431111C9911250033E4A3 /* RootTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableTableViewController.h; sourceTree = "<group>"; };
 		04F431121C9911250033E4A3 /* RootTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableTableViewController.m; sourceTree = "<group>"; };
+		04F431151C9954F40033E4A3 /* SmoothGestureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothGestureController.h; sourceTree = "<group>"; };
+		04F431161C9954F40033E4A3 /* SmoothGestureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmoothGestureController.m; sourceTree = "<group>"; };
 		8C17D80A1C992C840071FB43 /* TwitterMaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterMaskViewController.h; sourceTree = "<group>"; };
 		8C17D80B1C992C840071FB43 /* TwitterMaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterMaskViewController.m; sourceTree = "<group>"; };
 		8C17D80D1C992CEE0071FB43 /* MaskTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskTransitionViewController.h; sourceTree = "<group>"; };
@@ -177,6 +180,7 @@
 		04F430EC1C990DD50033E4A3 /* Demos */ = {
 			isa = PBXGroup;
 			children = (
+				04F431141C9954C40033E4A3 /* SmoothGesture(平滑手势) */,
 				04F4310D1C990F880033E4A3 /* BottomBarMenu(底部菜单) */,
 				04F430ED1C990DD50033E4A3 /* 3DCardImage(3D图片) */,
 				04F430EE1C990DD50033E4A3 /* DynamicSlideMenu(动态侧边栏) */,
@@ -273,6 +277,15 @@
 				04F4310F1C990FA00033E4A3 /* BottomBarViewController.m */,
 			);
 			path = "BottomBarMenu(底部菜单)";
+			sourceTree = "<group>";
+		};
+		04F431141C9954C40033E4A3 /* SmoothGesture(平滑手势) */ = {
+			isa = PBXGroup;
+			children = (
+				04F431151C9954F40033E4A3 /* SmoothGestureController.h */,
+				04F431161C9954F40033E4A3 /* SmoothGestureController.m */,
+			);
+			path = "SmoothGesture(平滑手势)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,6 +426,7 @@
 				04F430F71C990E9B0033E4A3 /* CardImageViewController.m in Sources */,
 				04F4310C1C990F530033E4A3 /* SnowViewController.m in Sources */,
 				04F431091C990F420033E4A3 /* SlideMenuViewController.m in Sources */,
+				04F431171C9954F40033E4A3 /* SmoothGestureController.m in Sources */,
 				04F430BE1C990A800033E4A3 /* AppDelegate.m in Sources */,
 				04F431001C990F070033E4A3 /* MaskViewController.m in Sources */,
 				04F430FD1C990EF50033E4A3 /* FireworkViewController.m in Sources */,
