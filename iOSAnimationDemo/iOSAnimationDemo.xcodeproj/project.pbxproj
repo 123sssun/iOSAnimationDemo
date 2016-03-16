@@ -29,6 +29,7 @@
 		04F431231C9968780033E4A3 /* JumpStarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F431221C9968780033E4A3 /* JumpStarViewController.m */; };
 		8C17D80C1C992C840071FB43 /* TwitterMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80B1C992C840071FB43 /* TwitterMaskViewController.m */; };
 		8C17D80F1C992CEE0071FB43 /* MaskTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80E1C992CEE0071FB43 /* MaskTransitionViewController.m */; };
+		D00C34CA1C999A2B00693732 /* DynamicSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C34C91C999A2B00693732 /* DynamicSlideMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,8 @@
 		8C17D80B1C992C840071FB43 /* TwitterMaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterMaskViewController.m; sourceTree = "<group>"; };
 		8C17D80D1C992CEE0071FB43 /* MaskTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskTransitionViewController.h; sourceTree = "<group>"; };
 		8C17D80E1C992CEE0071FB43 /* MaskTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskTransitionViewController.m; sourceTree = "<group>"; };
+		D00C34C81C999A2B00693732 /* DynamicSlideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicSlideMenu.h; sourceTree = "<group>"; };
+		D00C34C91C999A2B00693732 /* DynamicSlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicSlideMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +219,8 @@
 			children = (
 				04F430F81C990ED40033E4A3 /* DynamicSlideController.h */,
 				04F430F91C990ED40033E4A3 /* DynamicSlideController.m */,
+				D00C34C81C999A2B00693732 /* DynamicSlideMenu.h */,
+				D00C34C91C999A2B00693732 /* DynamicSlideMenu.m */,
 			);
 			path = "DynamicSlideMenu(动态侧边栏)";
 			sourceTree = "<group>";
@@ -449,6 +454,7 @@
 			files = (
 				04F431061C990F290033E4A3 /* RubberBallViewController.m in Sources */,
 				8C17D80F1C992CEE0071FB43 /* MaskTransitionViewController.m in Sources */,
+				D00C34CA1C999A2B00693732 /* DynamicSlideMenu.m in Sources */,
 				04F430F71C990E9B0033E4A3 /* CardImageViewController.m in Sources */,
 				04F4310C1C990F530033E4A3 /* SnowViewController.m in Sources */,
 				04F431091C990F420033E4A3 /* SlideMenuViewController.m in Sources */,
