@@ -30,6 +30,7 @@
 		8C17D80C1C992C840071FB43 /* TwitterMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80B1C992C840071FB43 /* TwitterMaskViewController.m */; };
 		8C17D80F1C992CEE0071FB43 /* MaskTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80E1C992CEE0071FB43 /* MaskTransitionViewController.m */; };
 		D00C34CA1C999A2B00693732 /* DynamicSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C34C91C999A2B00693732 /* DynamicSlideMenu.m */; };
+		E40497E41C99AF16008172DC /* RubbleBallLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E40497E31C99AF16008172DC /* RubbleBallLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,8 @@
 		8C17D80E1C992CEE0071FB43 /* MaskTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskTransitionViewController.m; sourceTree = "<group>"; };
 		D00C34C81C999A2B00693732 /* DynamicSlideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicSlideMenu.h; sourceTree = "<group>"; };
 		D00C34C91C999A2B00693732 /* DynamicSlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicSlideMenu.m; sourceTree = "<group>"; };
+		E40497E21C99AF16008172DC /* RubbleBallLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RubbleBallLayer.h; sourceTree = "<group>"; };
+		E40497E31C99AF16008172DC /* RubbleBallLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RubbleBallLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +264,7 @@
 			children = (
 				04F431041C990F290033E4A3 /* RubberBallViewController.h */,
 				04F431051C990F290033E4A3 /* RubberBallViewController.m */,
+				E40497E11C99AEF6008172DC /* RubbleBallView */,
 			);
 			path = "RubberBall(小皮球)";
 			sourceTree = "<group>";
@@ -317,6 +321,15 @@
 				04F431221C9968780033E4A3 /* JumpStarViewController.m */,
 			);
 			path = "JumpStarDemo(星跳)";
+			sourceTree = "<group>";
+		};
+		E40497E11C99AEF6008172DC /* RubbleBallView */ = {
+			isa = PBXGroup;
+			children = (
+				E40497E21C99AF16008172DC /* RubbleBallLayer.h */,
+				E40497E31C99AF16008172DC /* RubbleBallLayer.m */,
+			);
+			path = RubbleBallView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,6 +477,7 @@
 				04F4311F1C9965BB0033E4A3 /* PullDownController.m in Sources */,
 				04F430FD1C990EF50033E4A3 /* FireworkViewController.m in Sources */,
 				04F430FA1C990ED40033E4A3 /* DynamicSlideController.m in Sources */,
+				E40497E41C99AF16008172DC /* RubbleBallLayer.m in Sources */,
 				04F431131C9911250033E4A3 /* RootTableTableViewController.m in Sources */,
 				8C17D80C1C992C840071FB43 /* TwitterMaskViewController.m in Sources */,
 				04F431101C990FA00033E4A3 /* BottomBarViewController.m in Sources */,
