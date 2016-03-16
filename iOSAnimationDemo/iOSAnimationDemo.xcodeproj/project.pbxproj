@@ -27,6 +27,7 @@
 		04F431171C9954F40033E4A3 /* SmoothGestureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F431161C9954F40033E4A3 /* SmoothGestureController.m */; };
 		04F4311F1C9965BB0033E4A3 /* PullDownController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4311E1C9965BB0033E4A3 /* PullDownController.m */; };
 		04F431231C9968780033E4A3 /* JumpStarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F431221C9968780033E4A3 /* JumpStarViewController.m */; };
+		04F431291C99B0D60033E4A3 /* ThreeDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F431271C99B0D60033E4A3 /* ThreeDView.m */; };
 		8C17D80C1C992C840071FB43 /* TwitterMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80B1C992C840071FB43 /* TwitterMaskViewController.m */; };
 		8C17D80F1C992CEE0071FB43 /* MaskTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80E1C992CEE0071FB43 /* MaskTransitionViewController.m */; };
 		D00C34CA1C999A2B00693732 /* DynamicSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C34C91C999A2B00693732 /* DynamicSlideMenu.m */; };
@@ -90,6 +91,8 @@
 		04F4311E1C9965BB0033E4A3 /* PullDownController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullDownController.m; sourceTree = "<group>"; };
 		04F431211C9968780033E4A3 /* JumpStarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpStarViewController.h; sourceTree = "<group>"; };
 		04F431221C9968780033E4A3 /* JumpStarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpStarViewController.m; sourceTree = "<group>"; };
+		04F431271C99B0D60033E4A3 /* ThreeDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeDView.m; sourceTree = "<group>"; };
+		04F431281C99B0D60033E4A3 /* ThreeDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeDView.h; sourceTree = "<group>"; };
 		8C17D80A1C992C840071FB43 /* TwitterMaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterMaskViewController.h; sourceTree = "<group>"; };
 		8C17D80B1C992C840071FB43 /* TwitterMaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterMaskViewController.m; sourceTree = "<group>"; };
 		8C17D80D1C992CEE0071FB43 /* MaskTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskTransitionViewController.h; sourceTree = "<group>"; };
@@ -210,6 +213,8 @@
 			children = (
 				04F430F51C990E9B0033E4A3 /* CardImageViewController.h */,
 				04F430F61C990E9B0033E4A3 /* CardImageViewController.m */,
+				04F431281C99B0D60033E4A3 /* ThreeDView.h */,
+				04F431271C99B0D60033E4A3 /* ThreeDView.m */,
 			);
 			path = "3DCardImage(3D图片)";
 			sourceTree = "<group>";
@@ -470,6 +475,7 @@
 				04F430BB1C990A800033E4A3 /* main.m in Sources */,
 				04F431231C9968780033E4A3 /* JumpStarViewController.m in Sources */,
 				04F431031C990F1B0033E4A3 /* ProgressViewController.m in Sources */,
+				04F431291C99B0D60033E4A3 /* ThreeDView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
