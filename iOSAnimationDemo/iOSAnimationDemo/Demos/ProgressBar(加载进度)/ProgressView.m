@@ -34,6 +34,7 @@
     return self;
     
 }
+#pragma mark - 私有方法
 //轻触事件，变更视图为进度条视样式
 -(void)tapped:(UITapGestureRecognizer *)tapped{
     
@@ -62,6 +63,48 @@
     radiusAnimation.delegate = self;
     [self.layer addAnimation:radiusAnimation forKey:@"cornerRadiusShrinkAnim"];
 }
+
+//画进度白线
+-(void)progressBarAnimation{
+    //画线
+    CAShapeLayer *progressLayer = [CAShapeLayer layer];
+    //线的路径
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    //    线的起点 因为有个线帽，所以要加上线帽的半径
+    [path moveToPoint:CGPointMake(_progressHeight/2, self.bounds.size.height/2)];
+    //    终点 同理减去线帽半径
+    [path addLineToPoint:CGPointMake(self.bounds.size.width -_progressHeight/2, self.bounds.size.height/2)];
+    
+    progressLayer.path = path.CGPath;
+    progressLayer.strokeColor = [UIColor whiteColor].CGColor;
+    progressLayer.lineWidth = self.frame.size.height-6;
+    //线帽
+    progressLayer.lineCap = kCALineCapRound;
+    
+    
+    /**
+     *  1 keyPath = strokeStart  动画的fromValue = 0，toValue = 1
+     表示从路径的0位置画到1 怎么画是按照清除开始的位置也就是清除0 一直清除到1 效果就是一条路径慢慢的消失
+     2 keyPath = strokeStart  动画的fromValue = 1，toValue = 0
+     表示从路径的1位置画到0 怎么画是按照清除开始的位置也就是1 这样开始的路径是空的（即都被清除掉了）一直清除到0 效果就是一条路径被反方向画出来
+     3 keyPath = strokeEnd  动画的fromValue = 0，toValue = 1
+     表示 这里我们分3个点说明动画的顺序  strokeEnd从结尾开始清除 首先整条路径先清除后2/3，接着清除1/3 效果就是正方向画出路径
+     4 keyPath = strokeEnd  动画的fromValue = 1，toValue = 0
+     效果就是反方向路径慢慢消失
+     */
+    
+    CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    pathAnimation.duration = 2.0f;
+    pathAnimation.fromValue = @(0.0f);
+    pathAnimation.toValue = @(1.0f);
+    pathAnimation.delegate = self;
+    //KVO 键值 区分动画
+    [pathAnimation setValue:@"progressBarAnimation" forKey:@"animationName"];
+    
+    [progressLayer addAnimation:pathAnimation forKey:nil];
+    [self.layer addSublayer:progressLayer];
+}
+
 #pragma mark - 动画代理方法
 //动画开始
 -(void)animationDidStart:(CAAnimation *)anim{
@@ -81,6 +124,7 @@
             self.bounds = CGRectMake(0, 0, _progressWidth, _progressHeight);
         } completion:^(BOOL finished) {
             [self.layer removeAllAnimations];
+            [self progressBarAnimation];
         }];
         
     }
