@@ -61,7 +61,7 @@ typedef enum {
     //B点的y相对于矩形的中心点保持不变,当运动的点为d时，那么B点不动，停留在矩形的边长中心点；如果运动的点为b，那么b会开始移动，不停留在边长中点上，能够移动的最大值为2倍的moveDistance
     CGPoint pointB = CGPointMake(self.movePiont == POINT_D ? rectCenter.x + self.outsideRect.size.width/2 : rectCenter.x + self.outsideRect.size.width/2 + 2*moveDistance, rectCenter.y);
     //运动方式同A 变化量为负
-    CGPoint pointC = CGPointMake(rectCenter.x, self.outsideRect.origin.y - moveDistance);
+    CGPoint pointC = CGPointMake(rectCenter.x, rectCenter.y + self.outsideRect.size.height/2 - moveDistance);
     //理由同B 变化量为负
     CGPoint pointD = CGPointMake(self.movePiont == POINT_D ? self.outsideRect.origin.x - 2*moveDistance : self.outsideRect.origin.x, rectCenter.y);
     

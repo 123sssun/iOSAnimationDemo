@@ -11,12 +11,10 @@
 @implementation RubberBallView
 
 /// 重定义了自身的layer类型为RubberBallView
-///
-/// @return <#return value description#>
 + (Class)layerClass{
     return [RubbleBallLayer class];
 }
-
+/// 初始化方法
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     

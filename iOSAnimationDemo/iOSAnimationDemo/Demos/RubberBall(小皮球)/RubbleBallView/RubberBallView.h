@@ -13,4 +13,6 @@
 
 @property (nonatomic, strong) RubbleBallLayer *rubberBallLayer;
 
+//- (instancetype)initWithFrame:(CGRect)frame;
+
 @end
