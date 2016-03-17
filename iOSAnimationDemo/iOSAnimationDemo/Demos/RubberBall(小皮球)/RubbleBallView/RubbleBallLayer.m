@@ -113,14 +113,33 @@ typedef enum {
     CGContextSetStrokeColorWithColor(ctx, [UIColor blackColor].CGColor);
     //设置填充颜色
     CGContextSetFillColorWithColor(ctx, [UIColor redColor].CGColor);
+    //!!!!!!!!此处需要使用实线，因此重新设置
     CGContextSetLineDash(ctx, 0, NULL, 0);
     //同时给线条和线条包围的内部区域填充颜色
     CGContextDrawPath(ctx, kCGPathFillStroke);
     
     
+    //标记出每个点并连线，方便观察，给所有关键点染色 -- 白色,辅助线颜色 -- 白色
+    //语法糖：字典@{}，数组@[]，基本数据类型封装成对象@234，@12.0，@YES,@(234+12.0)
+    CGContextSetFillColorWithColor(ctx, [UIColor blueColor].CGColor);
+    CGContextSetStrokeColorWithColor(ctx, [UIColor blackColor].CGColor);
+    NSArray *points = @[[NSValue valueWithCGPoint:pointA],
+                        [NSValue valueWithCGPoint:pointB],
+                        [NSValue valueWithCGPoint:pointC],
+                        [NSValue valueWithCGPoint:pointD],
+                        [NSValue valueWithCGPoint:c1],
+                        [NSValue valueWithCGPoint:c2],
+                        [NSValue valueWithCGPoint:c3],
+                        [NSValue valueWithCGPoint:c4],
+                        [NSValue valueWithCGPoint:c5],
+                        [NSValue valueWithCGPoint:c6],
+                        [NSValue valueWithCGPoint:c7],
+                        [NSValue valueWithCGPoint:c8]];
+    [self drawPoints:points WithContext:ctx];
+    
 }
 
-/// 为每个坐标绘制出i一个点，方便观察
+/// 为每个坐标绘制出一个点，方便观察
 ///
 /// @param points 坐标数组
 /// @param ctx    图形上下文
