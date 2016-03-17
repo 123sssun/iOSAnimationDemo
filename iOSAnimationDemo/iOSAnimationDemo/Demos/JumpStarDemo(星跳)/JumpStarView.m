@@ -132,6 +132,29 @@
         _isAnimating = NO;
     }
 }
-
+// 阴影动画
+- (void)animationDidStart:(CAAnimation *)anim {
+    // 根据动画Key来判断
+    if ([anim isEqual:[_starView.layer animationForKey:@"jumpUp"]]) {
+        
+        [UIView animateWithDuration:jumpDuration delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            
+            _shadowView.bounds = CGRectMake(0, 0, _shadowView.bounds.size.width * 1.6, _shadowView.bounds.size.height);
+            
+            _shadowView.alpha = 0.2;
+            
+        } completion:NULL];
+        
+    } else if ([anim isEqual:[_starView.layer animationForKey:@"jumpDown"]]) {
+        
+        [UIView animateWithDuration:downDuration delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            
+            _shadowView.bounds = CGRectMake(0, 0, _shadowView.bounds.size.width / 1.6, _shadowView.bounds.size.height);
+            
+            _shadowView.alpha = 0.4;
+            
+        } completion:NULL];
+    }
+}
 
 @end
