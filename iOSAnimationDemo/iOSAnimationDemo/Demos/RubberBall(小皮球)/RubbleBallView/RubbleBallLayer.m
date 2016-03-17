@@ -99,7 +99,39 @@ typedef enum {
     CGContextSetLineDash(ctx, 0, dash, 2);
     CGContextStrokePath(ctx);
     
+#pragma mark - 绘制圆的每段弧
+    UIBezierPath *ovalPath = [UIBezierPath bezierPath];
+    [ovalPath moveToPoint:pointA];
+    //画弧需要2个控制点
+    [ovalPath addCurveToPoint:pointB controlPoint1:c1 controlPoint2:c2];
+    [ovalPath addCurveToPoint:pointC controlPoint1:c3 controlPoint2:c4];
+    [ovalPath addCurveToPoint:pointD controlPoint1:c5 controlPoint2:c6];
+    [ovalPath addCurveToPoint:pointA controlPoint1:c7 controlPoint2:c8];
+    [ovalPath closePath];
+    
+    CGContextAddPath(ctx, ovalPath.CGPath);
+    CGContextSetStrokeColorWithColor(ctx, [UIColor blackColor].CGColor);
+    //设置填充颜色
+    CGContextSetFillColorWithColor(ctx, [UIColor redColor].CGColor);
+    CGContextSetLineDash(ctx, 0, NULL, 0);
+    //同时给线条和线条包围的内部区域填充颜色
+    CGContextDrawPath(ctx, kCGPathFillStroke);
+    
+    
 }
+
+/// 为每个坐标绘制出i一个点，方便观察
+///
+/// @param points 坐标数组
+/// @param ctx    图形上下文
+- (void)drawPoints:(NSArray *)points WithContext:(CGContextRef)ctx {
+    for (NSValue *pointValue in points) {
+        CGPoint point = [pointValue CGPointValue];
+        //为每个坐标填充一个2x2像素大小的矩形
+        CGContextFillRect(ctx, CGRectMake(point.x - 2, point.y - 2, 2, 2));
+    }
+}
+
 #pragma mark - setter
 /// 重写progress的setter方法，每当progress发生改变时就调用该方法
 - (void)setProgress:(CGFloat)progress{
