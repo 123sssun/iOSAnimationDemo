@@ -31,6 +31,7 @@
 		8C17D80F1C992CEE0071FB43 /* MaskTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80E1C992CEE0071FB43 /* MaskTransitionViewController.m */; };
 		D00C34CA1C999A2B00693732 /* DynamicSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C34C91C999A2B00693732 /* DynamicSlideMenu.m */; };
 		E40497E41C99AF16008172DC /* RubbleBallLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E40497E31C99AF16008172DC /* RubbleBallLayer.m */; };
+		E4C5218A1C9A8AB9005A102F /* RubberBallView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C521891C9A8AB9005A102F /* RubberBallView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,8 @@
 		D00C34C91C999A2B00693732 /* DynamicSlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicSlideMenu.m; sourceTree = "<group>"; };
 		E40497E21C99AF16008172DC /* RubbleBallLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RubbleBallLayer.h; sourceTree = "<group>"; };
 		E40497E31C99AF16008172DC /* RubbleBallLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RubbleBallLayer.m; sourceTree = "<group>"; };
+		E4C521881C9A8AB9005A102F /* RubberBallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RubberBallView.h; sourceTree = "<group>"; };
+		E4C521891C9A8AB9005A102F /* RubberBallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RubberBallView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,6 +329,8 @@
 		E40497E11C99AEF6008172DC /* RubbleBallView */ = {
 			isa = PBXGroup;
 			children = (
+				E4C521881C9A8AB9005A102F /* RubberBallView.h */,
+				E4C521891C9A8AB9005A102F /* RubberBallView.m */,
 				E40497E21C99AF16008172DC /* RubbleBallLayer.h */,
 				E40497E31C99AF16008172DC /* RubbleBallLayer.m */,
 			);
@@ -476,6 +481,7 @@
 				04F431001C990F070033E4A3 /* MaskViewController.m in Sources */,
 				04F4311F1C9965BB0033E4A3 /* PullDownController.m in Sources */,
 				04F430FD1C990EF50033E4A3 /* FireworkViewController.m in Sources */,
+				E4C5218A1C9A8AB9005A102F /* RubberBallView.m in Sources */,
 				04F430FA1C990ED40033E4A3 /* DynamicSlideController.m in Sources */,
 				E40497E41C99AF16008172DC /* RubbleBallLayer.m in Sources */,
 				04F431131C9911250033E4A3 /* RootTableTableViewController.m in Sources */,
