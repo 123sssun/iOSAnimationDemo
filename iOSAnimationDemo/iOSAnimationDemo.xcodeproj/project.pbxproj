@@ -28,6 +28,7 @@
 		04F431231C9968780033E4A3 /* JumpStarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F431221C9968780033E4A3 /* JumpStarViewController.m */; };
 		04F431291C99B0D60033E4A3 /* ThreeDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F431271C99B0D60033E4A3 /* ThreeDView.m */; };
 		2F5E72121C9A65FA007E8B5B /* JumpStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E72111C9A65FA007E8B5B /* JumpStarView.m */; };
+		46F889A41C9AEAD5002AA5F5 /* SmoothView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F889A31C9AEAD5002AA5F5 /* SmoothView.m */; };
 		8C17D80C1C992C840071FB43 /* TwitterMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80B1C992C840071FB43 /* TwitterMaskViewController.m */; };
 		8C17D80F1C992CEE0071FB43 /* MaskTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80E1C992CEE0071FB43 /* MaskTransitionViewController.m */; };
 		C2AB927B1C9A60BF00F269AF /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AB927A1C9A60BF00F269AF /* ProgressView.m */; };
@@ -94,6 +95,8 @@
 		04F431281C99B0D60033E4A3 /* ThreeDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeDView.h; sourceTree = "<group>"; };
 		2F5E72101C9A65FA007E8B5B /* JumpStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpStarView.h; sourceTree = "<group>"; };
 		2F5E72111C9A65FA007E8B5B /* JumpStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpStarView.m; sourceTree = "<group>"; };
+		46F889A21C9AEAD5002AA5F5 /* SmoothView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothView.h; sourceTree = "<group>"; };
+		46F889A31C9AEAD5002AA5F5 /* SmoothView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmoothView.m; sourceTree = "<group>"; };
 		8C17D80A1C992C840071FB43 /* TwitterMaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterMaskViewController.h; sourceTree = "<group>"; };
 		8C17D80B1C992C840071FB43 /* TwitterMaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterMaskViewController.m; sourceTree = "<group>"; };
 		8C17D80D1C992CEE0071FB43 /* MaskTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskTransitionViewController.h; sourceTree = "<group>"; };
@@ -295,6 +298,8 @@
 		04F431141C9954C40033E4A3 /* SmoothGesture(平滑手势) */ = {
 			isa = PBXGroup;
 			children = (
+				46F889A21C9AEAD5002AA5F5 /* SmoothView.h */,
+				46F889A31C9AEAD5002AA5F5 /* SmoothView.m */,
 				04F431151C9954F40033E4A3 /* SmoothGestureController.h */,
 				04F431161C9954F40033E4A3 /* SmoothGestureController.m */,
 			);
@@ -454,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46F889A41C9AEAD5002AA5F5 /* SmoothView.m in Sources */,
 				D08FA12B1C9A8F7E00E2701E /* FireworkButton.m in Sources */,
 				04F431061C990F290033E4A3 /* RubberBallViewController.m in Sources */,
 				C2AB927B1C9A60BF00F269AF /* ProgressView.m in Sources */,
