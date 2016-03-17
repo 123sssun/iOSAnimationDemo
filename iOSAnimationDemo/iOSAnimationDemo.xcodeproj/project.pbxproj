@@ -31,6 +31,7 @@
 		8C17D80C1C992C840071FB43 /* TwitterMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80B1C992C840071FB43 /* TwitterMaskViewController.m */; };
 		8C17D80F1C992CEE0071FB43 /* MaskTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80E1C992CEE0071FB43 /* MaskTransitionViewController.m */; };
 		C2AB927B1C9A60BF00F269AF /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AB927A1C9A60BF00F269AF /* ProgressView.m */; };
+		D08FA12B1C9A8F7E00E2701E /* FireworkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D08FA12A1C9A8F7E00E2701E /* FireworkButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,8 @@
 		8C17D80E1C992CEE0071FB43 /* MaskTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskTransitionViewController.m; sourceTree = "<group>"; };
 		C2AB92791C9A60BE00F269AF /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
 		C2AB927A1C9A60BF00F269AF /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
+		D08FA1291C9A8F7E00E2701E /* FireworkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireworkButton.h; sourceTree = "<group>"; };
+		D08FA12A1C9A8F7E00E2701E /* FireworkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireworkButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +226,8 @@
 			children = (
 				04F430FB1C990EF50033E4A3 /* FireworkViewController.h */,
 				04F430FC1C990EF50033E4A3 /* FireworkViewController.m */,
+				D08FA1291C9A8F7E00E2701E /* FireworkButton.h */,
+				D08FA12A1C9A8F7E00E2701E /* FireworkButton.m */,
 			);
 			path = "FireworkBtn(火花按钮)";
 			sourceTree = "<group>";
@@ -449,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D08FA12B1C9A8F7E00E2701E /* FireworkButton.m in Sources */,
 				04F431061C990F290033E4A3 /* RubberBallViewController.m in Sources */,
 				C2AB927B1C9A60BF00F269AF /* ProgressView.m in Sources */,
 				8C17D80F1C992CEE0071FB43 /* MaskTransitionViewController.m in Sources */,

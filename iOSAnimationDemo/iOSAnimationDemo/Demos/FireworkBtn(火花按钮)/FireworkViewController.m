@@ -7,7 +7,7 @@
 //
 
 #import "FireworkViewController.h"
-
+#import "FireworkButton.h"
 @interface FireworkViewController ()
 
 @end
@@ -16,9 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    FireworkButton *test = [[FireworkButton alloc]initWithFrame:CGRectMake(100, 100, 40, 40)];
+    [self.view addSubview:test];
 
-    CGFloat x = random() % 244 + 1.0;
-    self.view.backgroundColor = [UIColor colorWithRed:x / 255.0 green:x / 255.0 blue:x / 255.0 alpha:1.0];
 }
 
 - (void)didReceiveMemoryWarning {
