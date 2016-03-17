@@ -30,6 +30,7 @@
 		04F431291C99B0D60033E4A3 /* ThreeDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F431271C99B0D60033E4A3 /* ThreeDView.m */; };
 		8C17D80C1C992C840071FB43 /* TwitterMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80B1C992C840071FB43 /* TwitterMaskViewController.m */; };
 		8C17D80F1C992CEE0071FB43 /* MaskTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80E1C992CEE0071FB43 /* MaskTransitionViewController.m */; };
+		C2AB927B1C9A60BF00F269AF /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AB927A1C9A60BF00F269AF /* ProgressView.m */; settings = {ASSET_TAGS = (); }; };
 		D00C34CA1C999A2B00693732 /* DynamicSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C34C91C999A2B00693732 /* DynamicSlideMenu.m */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,8 @@
 		8C17D80B1C992C840071FB43 /* TwitterMaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterMaskViewController.m; sourceTree = "<group>"; };
 		8C17D80D1C992CEE0071FB43 /* MaskTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskTransitionViewController.h; sourceTree = "<group>"; };
 		8C17D80E1C992CEE0071FB43 /* MaskTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskTransitionViewController.m; sourceTree = "<group>"; };
+		C2AB92791C9A60BE00F269AF /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		C2AB927A1C9A60BF00F269AF /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 		D00C34C81C999A2B00693732 /* DynamicSlideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicSlideMenu.h; sourceTree = "<group>"; };
 		D00C34C91C999A2B00693732 /* DynamicSlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicSlideMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -257,6 +260,8 @@
 			children = (
 				04F431011C990F1B0033E4A3 /* ProgressViewController.h */,
 				04F431021C990F1B0033E4A3 /* ProgressViewController.m */,
+				C2AB92791C9A60BE00F269AF /* ProgressView.h */,
+				C2AB927A1C9A60BF00F269AF /* ProgressView.m */,
 			);
 			path = "ProgressBar(加载进度)";
 			sourceTree = "<group>";
@@ -458,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F431061C990F290033E4A3 /* RubberBallViewController.m in Sources */,
+				C2AB927B1C9A60BF00F269AF /* ProgressView.m in Sources */,
 				8C17D80F1C992CEE0071FB43 /* MaskTransitionViewController.m in Sources */,
 				D00C34CA1C999A2B00693732 /* DynamicSlideMenu.m in Sources */,
 				04F430F71C990E9B0033E4A3 /* CardImageViewController.m in Sources */,
@@ -615,6 +621,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iOSAnimationDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.itcast.iOSAnimationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -626,6 +633,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iOSAnimationDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.itcast.iOSAnimationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
