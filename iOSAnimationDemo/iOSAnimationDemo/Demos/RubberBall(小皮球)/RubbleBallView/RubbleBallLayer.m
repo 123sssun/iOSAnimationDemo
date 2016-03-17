@@ -41,13 +41,36 @@ typedef enum {
     return self;
 }
 
-/// 绘制皮球（4段弧 每段弧由3条贝塞尔曲线完成）以及关键坐标点
+/// 绘制皮球（4段弧 每段弧有4个点 画3条贝塞尔曲线来完成一段弧）以及关键坐标点,控制点
 - (void)drawInContext:(CGContextRef)ctx{
     /// AC1 BC2 BC3 CC4...两点之间的距离
-    //当设置为正方形边长的1/3.6倍时，画出来的圆弧完美贴合圆形
+    //当设置为正方形边长的1/3.6倍时，画出来的圆弧完美贴合圆形（控制点发生的变化量）
     CGFloat offset = self.outsideRect.size.width / 3.6;
-}
+    
+    /// ABCD的实际移动距离 系数为progress和0.5的绝对差值的2倍，最大moveDistance为outsideRect的边长的1/6
+    // 4个矩形边长中心点发生的变化量
+    //double fabs(double); 取模（求绝对值）
+    CGFloat moveDistance = (self.outsideRect.size.width / 6) * fabs(self.progress - 0.5)*2;
 
+    /// 计算出矩形的中心点位置，方便之后各个点的计算（origion为rect左上角点的坐标）
+    CGPoint rectCenter = CGPointMake(self.outsideRect.origin.x + self.outsideRect.size.width/2, self.outsideRect.origin.y + self.outsideRect.size.height/2);
+    
+#pragma mark - 计算矩形边长中点上各个点的对应坐标位置
+    //相对于outsideRect的中心点的变化, A点的x相对于矩形的中心点保持不变 y相对于矩形的原点发生改变
+    CGPoint pointA = CGPointMake(rectCenter.x, self.outsideRect.origin.y + moveDistance);
+    //B点的y相对于矩形的中心点保持不变,当运动的点为d时，那么B点不动，停留在矩形的边长中心点；如果运动的点为b，那么b会开始移动，不停留在边长中点上，能够移动的最大值为2倍的moveDistance
+    CGPoint pointB = CGPointMake(self.movePiont == POINT_D ? rectCenter.x + self.outsideRect.size.width/2 : rectCenter.x + self.outsideRect.size.width/2 + 2*moveDistance, rectCenter.y);
+    //运动方式同A 变化量为负
+    CGPoint pointC = CGPointMake(rectCenter.x, self.outsideRect.origin.y - moveDistance);
+    //理由同B 变化量为负
+    CGPoint pointD = CGPointMake(self.movePiont == POINT_D ? self.outsideRect.origin.x - 2*moveDistance : self.outsideRect.origin.x, rectCenter.y);
+    
+#pragma mark - 计算每条弧上的控制点的坐标
+    
+    
+    
+}
+#pragma mark - setter
 /// 重写progress的setter方法，每当progress发生改变时就调用该方法
 - (void)setProgress:(CGFloat)progress{
     _progress = progress;
@@ -55,10 +78,10 @@ typedef enum {
     //判断左/右移
     if (progress <= 0.5){
         self.movePiont = POINT_B;
-        NSLog(@"B动");
+        NSLog(@"B动在矩形外移动");
     } else {
         self.movePiont = POINT_D;
-        NSLog(@"D动");
+        NSLog(@"D动在矩形外移动");
     }
     
     self.lastProgress = progress;
