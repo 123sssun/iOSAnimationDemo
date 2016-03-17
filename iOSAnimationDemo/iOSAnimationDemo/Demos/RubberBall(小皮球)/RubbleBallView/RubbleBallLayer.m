@@ -65,9 +65,23 @@ typedef enum {
     //理由同B 变化量为负
     CGPoint pointD = CGPointMake(self.movePiont == POINT_D ? self.outsideRect.origin.x - 2*moveDistance : self.outsideRect.origin.x, rectCenter.y);
     
-#pragma mark - 计算每条弧上的控制点的坐标
-    
-    
+#pragma mark - 计算每条弧上的控制点的坐标（变化的点只有 c2，3，6，7）
+    //该点固定，保持不变
+    CGPoint c1 = CGPointMake(pointA.x + offset, pointA.y);
+    //当D点运动时，c2的x，y保持不变，只有当B点运动时，c2的y会随着moveDistance发生改变
+    CGPoint c2 = CGPointMake(pointB.x, self.movePiont == POINT_D ? pointB.y - offset : pointB.y - offset + moveDistance);
+    //同c2
+    CGPoint c3 = CGPointMake(pointB.x, self.movePiont == POINT_D ? pointB.y + offset : pointB.y + offset - moveDistance);
+    //同c1
+    CGPoint c4 = CGPointMake(pointC.x + offset, pointC.y);
+    //同c1
+    CGPoint c5 = CGPointMake(pointC.x - offset, pointC.y);
+    //当D运动时，c6的y保持不变，x发生改变，反之都不变
+    CGPoint c6 = CGPointMake(pointD.x, self.movePiont == POINT_D ? pointD.y + offset - moveDistance : pointD.y + offset);
+    //同c6
+    CGPoint c7 = CGPointMake(pointD.x, self.movePiont == POINT_D ? pointD.y - offset + moveDistance : pointD.y - offset);
+    //同c1
+    CGPoint c8 = CGPointMake(pointA.x - offset, pointA.y);
     
 }
 #pragma mark - setter
