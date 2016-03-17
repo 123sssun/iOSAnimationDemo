@@ -55,8 +55,83 @@
         [self addSubview:_shadowView];
     }
 }
+// 根据状态设置图片
+- (void)setState:(State)state {
+    _state = state;
+    
+    _starView.image = (state == STAR) ? _starImage : _loveImage;
+}
 // MARK: - 上弹动画效果
 - (void)jump {
+    // 确保动画执行
+    if (_isAnimating == YES) {
+        return;
+    }
+    
+    _isAnimating = YES;
+    // 旋转
+    CABasicAnimation *transformAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.y"];
+    transformAnimation.fromValue = @(0);
+    transformAnimation.toValue = @(M_PI_2);
+    // 动画节奏 慢进慢出
+    transformAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    // 跳跃
+    CABasicAnimation *positionAnimation = [CABasicAnimation animationWithKeyPath:@"position.y"];
+    
+    positionAnimation.fromValue = @(_starView.center.y);
+    positionAnimation.toValue = @(_starView.center.y - 15);
+    positionAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]; // 上弹应该是减速运动
+    
+    CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
+    animationGroup.duration = jumpDuration;
+    // 非动画时间的当前对象处理
+    animationGroup.fillMode = kCAFillModeForwards;
+    animationGroup.removedOnCompletion = NO;
+    // 设置代理才可以实现代理方法 animationDidStop:
+    animationGroup.delegate = self;
+    animationGroup.animations = @[transformAnimation, positionAnimation];
+    
+    [_starView.layer addAnimation:animationGroup forKey:@"jumpUp"];
+    
 }
+// 下落动画
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    // 切换图像
+    // 根据layer的Key判断动画
+    if ([anim isEqual:[_starView.layer animationForKey:@"jumpUp"]]) {
+        self.state = (self.state == STAR) ? LOVE : STAR;
+        // 旋转
+        CABasicAnimation *transformAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.y"];
+        transformAnimation.fromValue = @(M_PI_2);
+        transformAnimation.toValue = @(M_PI);
+        
+        // 动画节奏 慢进慢出
+        transformAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        // 跳跃
+        CABasicAnimation *positionAnimation = [CABasicAnimation animationWithKeyPath:@"position.y"];
+        
+        positionAnimation.fromValue = @(_starView.center.y - 15);
+        positionAnimation.toValue = @(_starView.center.y);
+        positionAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]; // 下落是加速运动
+        
+        CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
+        animationGroup.duration = downDuration;
+        // 非动画时间的当前对象处理
+        animationGroup.fillMode = kCAFillModeForwards;
+        animationGroup.removedOnCompletion = NO;
+        // 设置代理才可以实现代理方法 animationDidStop:
+        animationGroup.delegate = self;
+        animationGroup.animations = @[transformAnimation, positionAnimation];
+        
+        [_starView.layer addAnimation:animationGroup forKey:@"jumpDown"];
+        
+    } else if ([anim isEqual:[_starView.layer animationForKey:@"jumpDown"]]) {
+        // 下落的时候 移除layer层所有动画 确保图片保持正面
+        [_starView.layer removeAllAnimations];
+        // 重置动画判断
+        _isAnimating = NO;
+    }
+}
+
 
 @end
