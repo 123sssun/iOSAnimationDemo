@@ -128,6 +128,42 @@
         }];
         
     }
+    
+    if ([anim isEqual:[self.layer animationForKey:@"cornerRadiusExpandAnim"]]){
+        [UIView animateWithDuration:0.6f delay:0.0f usingSpringWithDamping:0.6 initialSpringVelocity:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            self.bounds = _originframe;
+            self.backgroundColor = [UIColor colorWithRed:0.1803921568627451 green:0.8 blue:0.44313725490196076 alpha:1.0];
+        } completion:^(BOOL finished) {
+            [self.layer removeAllAnimations];
+        }];
+    }
 
+}
+//动画结束
+-(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    if ([[anim valueForKey:@"animationName"]isEqualToString:@"progressBarAnimation"]){
+        [UIView animateWithDuration:0.3 animations:^{
+            //            进度条透明动画
+            for (CALayer *subLayer in self.layer.sublayers) {
+                subLayer.opacity = 0.0f;
+            }
+        } completion:^(BOOL finished) {
+            if (finished) {
+                //            移除图层
+                for (CALayer *subLayer in self.layer.sublayers) {
+                    [subLayer removeFromSuperlayer];
+                }
+                
+                self.layer.cornerRadius = _originframe.size.height/2;
+                CABasicAnimation *radiusAnimation = [CABasicAnimation animationWithKeyPath:@"cornerRadius"];
+                radiusAnimation.duration = 0.2f;
+                radiusAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+                radiusAnimation.fromValue = @(_progressHeight /2);
+                radiusAnimation.delegate = self;
+                [self.layer addAnimation:radiusAnimation forKey:@"cornerRadiusExpandAnim"];
+                
+            }
+        }];
+    }
 }
 @end
