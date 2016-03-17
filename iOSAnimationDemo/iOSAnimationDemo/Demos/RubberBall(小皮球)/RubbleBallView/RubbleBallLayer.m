@@ -96,7 +96,7 @@ typedef enum {
     /// @param phase#>   当绘制第一条实线时长度要减去phase
     /// @param lengths#> 数组例如 ｛10，5｝，先绘制10个点长度的实线，接下来的5个点不绘制直接隔开，继续绘制10个点的实线，再隔开5个点不绘制直接隔开，一次类推 例｛3，2｝。。。..。。。..。。。..
     /// @param count#>   lenths数组的长度
-    CGContextSetLineDash(ctx, 0, dash, 2);
+    CGContextSetLineDash(ctx, 0, dash, 2);//1
     CGContextStrokePath(ctx);
     
 #pragma mark - 绘制圆的每段弧
@@ -114,11 +114,11 @@ typedef enum {
     //设置填充颜色
     CGContextSetFillColorWithColor(ctx, [UIColor redColor].CGColor);
     //!!!!!!!!此处需要使用实线，因此重新设置
-    CGContextSetLineDash(ctx, 0, NULL, 0);
+    CGContextSetLineDash(ctx, 0, NULL, 0); //2
     //同时给线条和线条包围的内部区域填充颜色
     CGContextDrawPath(ctx, kCGPathFillStroke);
     
-    
+#pragma mark - 绘制坐标点
     //标记出每个点并连线，方便观察，给所有关键点染色 -- 白色,辅助线颜色 -- 白色
     //语法糖：字典@{}，数组@[]，基本数据类型封装成对象@234，@12.0，@YES,@(234+12.0)
     CGContextSetFillColorWithColor(ctx, [UIColor blueColor].CGColor);
@@ -137,7 +137,31 @@ typedef enum {
                         [NSValue valueWithCGPoint:c8]];
     [self drawPoints:points WithContext:ctx];
     
+#pragma mark - 连接辅助线
+    UIBezierPath *helpPath = [UIBezierPath bezierPath];
+    [helpPath moveToPoint:pointA];
+    [helpPath addLineToPoint:c1];
+    [helpPath addLineToPoint:c2];
+    [helpPath addLineToPoint:pointB];
+    [helpPath addLineToPoint:c3];
+    [helpPath addLineToPoint:c4];
+    [helpPath addLineToPoint:pointC];
+    [helpPath addLineToPoint:c5];
+    [helpPath addLineToPoint:c6];
+    [helpPath addLineToPoint:pointD];
+    [helpPath addLineToPoint:c7];
+    [helpPath addLineToPoint:c8];
+    [helpPath closePath];
+    
+    CGContextAddPath(ctx, helpPath.CGPath);
+    CGFloat dash2[] = {2.0, 2.0};
+    CGContextSetLineDash(ctx, 0, dash2, 2);
+    CGContextStrokePath(ctx);
+    
 }
+//*********************************************************************************
+//ctx字面意思是上下文，你可以理解为一块全局的画布。也就是说，一旦在某个地方改了画布的一些属性，其他任何使用画布的属性的时候都是改了之后的。比如上面在 //1 中把线条样式改成了虚线，那么在下文 //2 中如果不恢复成连续的直线，那么画出来的依然是//1中的虚线样式
+//*********************************************************************************
 
 /// 为每个坐标绘制出一个点，方便观察
 ///
