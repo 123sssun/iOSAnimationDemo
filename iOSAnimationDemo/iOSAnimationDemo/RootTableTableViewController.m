@@ -27,7 +27,7 @@ static NSString *cellIdentifier = @"reuseIdentifier";
     
     self.demoList = @[@[@"底部菜单", @"BottomBarViewController"],
                       @[@"3D图片", @"CardImageViewController"],
-                      @[@"动态侧边栏", @"DynamicSlideController"],
+                      //@[@"动态侧边栏", @"DynamicSlideController"],
                       @[@"火花按钮", @"FireworkViewController"],
                       @[@"遮罩", @"MaskViewController"],
                       @[@"加载进度", @"ProgressViewController"],

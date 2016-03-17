@@ -15,7 +15,6 @@
 		04F430D41C990A810033E4A3 /* iOSAnimationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F430D31C990A810033E4A3 /* iOSAnimationDemoTests.m */; };
 		04F430DF1C990A810033E4A3 /* iOSAnimationDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F430DE1C990A810033E4A3 /* iOSAnimationDemoUITests.m */; };
 		04F430F71C990E9B0033E4A3 /* CardImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F430F61C990E9B0033E4A3 /* CardImageViewController.m */; };
-		04F430FA1C990ED40033E4A3 /* DynamicSlideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F430F91C990ED40033E4A3 /* DynamicSlideController.m */; };
 		04F430FD1C990EF50033E4A3 /* FireworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F430FC1C990EF50033E4A3 /* FireworkViewController.m */; };
 		04F431001C990F070033E4A3 /* MaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F430FF1C990F070033E4A3 /* MaskViewController.m */; };
 		04F431031C990F1B0033E4A3 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F431021C990F1B0033E4A3 /* ProgressViewController.m */; };
@@ -31,8 +30,7 @@
 		2F5E72121C9A65FA007E8B5B /* JumpStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E72111C9A65FA007E8B5B /* JumpStarView.m */; };
 		8C17D80C1C992C840071FB43 /* TwitterMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80B1C992C840071FB43 /* TwitterMaskViewController.m */; };
 		8C17D80F1C992CEE0071FB43 /* MaskTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80E1C992CEE0071FB43 /* MaskTransitionViewController.m */; };
-		C2AB927B1C9A60BF00F269AF /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AB927A1C9A60BF00F269AF /* ProgressView.m */; settings = {ASSET_TAGS = (); }; };
-		D00C34CA1C999A2B00693732 /* DynamicSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C34C91C999A2B00693732 /* DynamicSlideMenu.m */; };
+		C2AB927B1C9A60BF00F269AF /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AB927A1C9A60BF00F269AF /* ProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +67,6 @@
 		04F430E01C990A810033E4A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04F430F51C990E9B0033E4A3 /* CardImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardImageViewController.h; sourceTree = "<group>"; };
 		04F430F61C990E9B0033E4A3 /* CardImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardImageViewController.m; sourceTree = "<group>"; };
-		04F430F81C990ED40033E4A3 /* DynamicSlideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicSlideController.h; sourceTree = "<group>"; };
-		04F430F91C990ED40033E4A3 /* DynamicSlideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicSlideController.m; sourceTree = "<group>"; };
 		04F430FB1C990EF50033E4A3 /* FireworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireworkViewController.h; sourceTree = "<group>"; };
 		04F430FC1C990EF50033E4A3 /* FireworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireworkViewController.m; sourceTree = "<group>"; };
 		04F430FE1C990F070033E4A3 /* MaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskViewController.h; sourceTree = "<group>"; };
@@ -103,8 +99,6 @@
 		8C17D80E1C992CEE0071FB43 /* MaskTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskTransitionViewController.m; sourceTree = "<group>"; };
 		C2AB92791C9A60BE00F269AF /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
 		C2AB927A1C9A60BF00F269AF /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
-		D00C34C81C999A2B00693732 /* DynamicSlideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicSlideMenu.h; sourceTree = "<group>"; };
-		D00C34C91C999A2B00693732 /* DynamicSlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicSlideMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,7 +197,6 @@
 				04F431141C9954C40033E4A3 /* SmoothGesture(平滑手势) */,
 				04F4310D1C990F880033E4A3 /* BottomBarMenu(底部菜单) */,
 				04F430ED1C990DD50033E4A3 /* 3DCardImage(3D图片) */,
-				04F430EE1C990DD50033E4A3 /* DynamicSlideMenu(动态侧边栏) */,
 				04F430EF1C990DD50033E4A3 /* FireworkBtn(火花按钮) */,
 				04F430F01C990DD50033E4A3 /* MaskView(遮罩) */,
 				04F430F11C990DD50033E4A3 /* ProgressBar(加载进度) */,
@@ -223,17 +216,6 @@
 				04F431271C99B0D60033E4A3 /* ThreeDView.m */,
 			);
 			path = "3DCardImage(3D图片)";
-			sourceTree = "<group>";
-		};
-		04F430EE1C990DD50033E4A3 /* DynamicSlideMenu(动态侧边栏) */ = {
-			isa = PBXGroup;
-			children = (
-				04F430F81C990ED40033E4A3 /* DynamicSlideController.h */,
-				04F430F91C990ED40033E4A3 /* DynamicSlideController.m */,
-				D00C34C81C999A2B00693732 /* DynamicSlideMenu.h */,
-				D00C34C91C999A2B00693732 /* DynamicSlideMenu.m */,
-			);
-			path = "DynamicSlideMenu(动态侧边栏)";
 			sourceTree = "<group>";
 		};
 		04F430EF1C990DD50033E4A3 /* FireworkBtn(火花按钮) */ = {
@@ -470,7 +452,6 @@
 				04F431061C990F290033E4A3 /* RubberBallViewController.m in Sources */,
 				C2AB927B1C9A60BF00F269AF /* ProgressView.m in Sources */,
 				8C17D80F1C992CEE0071FB43 /* MaskTransitionViewController.m in Sources */,
-				D00C34CA1C999A2B00693732 /* DynamicSlideMenu.m in Sources */,
 				04F430F71C990E9B0033E4A3 /* CardImageViewController.m in Sources */,
 				04F4310C1C990F530033E4A3 /* SnowViewController.m in Sources */,
 				04F431091C990F420033E4A3 /* SlideMenuViewController.m in Sources */,
@@ -479,7 +460,6 @@
 				04F431001C990F070033E4A3 /* MaskViewController.m in Sources */,
 				04F4311F1C9965BB0033E4A3 /* PullDownController.m in Sources */,
 				04F430FD1C990EF50033E4A3 /* FireworkViewController.m in Sources */,
-				04F430FA1C990ED40033E4A3 /* DynamicSlideController.m in Sources */,
 				04F431131C9911250033E4A3 /* RootTableTableViewController.m in Sources */,
 				8C17D80C1C992C840071FB43 /* TwitterMaskViewController.m in Sources */,
 				2F5E72121C9A65FA007E8B5B /* JumpStarView.m in Sources */,
