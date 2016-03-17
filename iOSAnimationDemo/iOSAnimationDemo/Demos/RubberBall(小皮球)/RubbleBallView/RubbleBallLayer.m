@@ -83,6 +83,22 @@ typedef enum {
     //同c1
     CGPoint c8 = CGPointMake(pointA.x - offset, pointA.y);
     
+#pragma mark - 绘制外接矩形（虚线）
+    UIBezierPath *rectPath = [UIBezierPath bezierPathWithRect:self.outsideRect];
+    //添加路径
+    CGContextAddPath(ctx, rectPath.CGPath);
+    //设置渲染颜色
+    CGContextSetStrokeColorWithColor(ctx, [UIColor blackColor].CGColor);
+    CGFloat dash[] = {5.0, 5.0};
+    /// 绘制虚线
+    ///
+    /// @param c#>       图形上下文
+    /// @param phase#>   当绘制第一条实线时长度要减去phase
+    /// @param lengths#> 数组例如 ｛10，5｝，先绘制10个点长度的实线，接下来的5个点不绘制直接隔开，继续绘制10个点的实线，再隔开5个点不绘制直接隔开，一次类推 例｛3，2｝。。。..。。。..。。。..
+    /// @param count#>   lenths数组的长度
+    CGContextSetLineDash(ctx, 0, dash, 2);
+    CGContextStrokePath(ctx);
+    
 }
 #pragma mark - setter
 /// 重写progress的setter方法，每当progress发生改变时就调用该方法
