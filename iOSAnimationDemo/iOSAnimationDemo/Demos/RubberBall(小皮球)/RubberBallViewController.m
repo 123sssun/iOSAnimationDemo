@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) UILabel *progressLabel;
 @property (nonatomic, strong) UISlider *progressSlider;
+@property (nonatomic, strong) UIButton *resetButton;
 @property (nonatomic, strong) RubberBallView *rubberView;
 
 @end
@@ -33,12 +34,25 @@
     [self.progressSlider addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
     self.progressSlider.value = 0.5;
     
+    self.resetButton = [[UIButton alloc] init];
+    [self.view addSubview:self.resetButton];
+    [self.resetButton setTitle:@"重置皮球形状" forState:UIControlStateNormal];
+    [self.resetButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [self.resetButton addTarget:self action:@selector(clickButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.resetButton sizeToFit];
+    self.resetButton.center = CGPointMake(self.view.center.x, self.view.center.y + 200);
+    
     self.rubberView = [[RubberBallView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 320/2, self.view.frame.size.height/2 - 320/2, 320, 320)];
     [self.view addSubview:self.rubberView];
     self.rubberView.rubberBallLayer.progress = self.progressSlider.value;
     
     
     
+}
+
+- (void)clickButton {
+    self.rubberView.rubberBallLayer.progress = 0.5;
+    self.progressSlider.value = 0.5;
 }
 
 - (void)valueChanged:(UISlider *)sender {

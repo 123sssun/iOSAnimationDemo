@@ -171,7 +171,7 @@ typedef enum {
     for (NSValue *pointValue in points) {
         CGPoint point = [pointValue CGPointValue];
         //为每个坐标填充一个2x2像素大小的矩形
-        CGContextFillRect(ctx, CGRectMake(point.x - 2, point.y - 2, 2, 2));
+        CGContextFillRect(ctx, CGRectMake(point.x - 2, point.y - 2, 4, 4));
     }
 }
 
