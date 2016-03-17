@@ -28,6 +28,7 @@
 		04F4311F1C9965BB0033E4A3 /* PullDownController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4311E1C9965BB0033E4A3 /* PullDownController.m */; };
 		04F431231C9968780033E4A3 /* JumpStarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F431221C9968780033E4A3 /* JumpStarViewController.m */; };
 		04F431291C99B0D60033E4A3 /* ThreeDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F431271C99B0D60033E4A3 /* ThreeDView.m */; };
+		2F5E72121C9A65FA007E8B5B /* JumpStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E72111C9A65FA007E8B5B /* JumpStarView.m */; };
 		8C17D80C1C992C840071FB43 /* TwitterMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80B1C992C840071FB43 /* TwitterMaskViewController.m */; };
 		8C17D80F1C992CEE0071FB43 /* MaskTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80E1C992CEE0071FB43 /* MaskTransitionViewController.m */; };
 		D00C34CA1C999A2B00693732 /* DynamicSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C34C91C999A2B00693732 /* DynamicSlideMenu.m */; };
@@ -93,6 +94,8 @@
 		04F431221C9968780033E4A3 /* JumpStarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpStarViewController.m; sourceTree = "<group>"; };
 		04F431271C99B0D60033E4A3 /* ThreeDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeDView.m; sourceTree = "<group>"; };
 		04F431281C99B0D60033E4A3 /* ThreeDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeDView.h; sourceTree = "<group>"; };
+		2F5E72101C9A65FA007E8B5B /* JumpStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpStarView.h; sourceTree = "<group>"; };
+		2F5E72111C9A65FA007E8B5B /* JumpStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpStarView.m; sourceTree = "<group>"; };
 		8C17D80A1C992C840071FB43 /* TwitterMaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterMaskViewController.h; sourceTree = "<group>"; };
 		8C17D80B1C992C840071FB43 /* TwitterMaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterMaskViewController.m; sourceTree = "<group>"; };
 		8C17D80D1C992CEE0071FB43 /* MaskTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskTransitionViewController.h; sourceTree = "<group>"; };
@@ -320,6 +323,8 @@
 			children = (
 				04F431211C9968780033E4A3 /* JumpStarViewController.h */,
 				04F431221C9968780033E4A3 /* JumpStarViewController.m */,
+				2F5E72101C9A65FA007E8B5B /* JumpStarView.h */,
+				2F5E72111C9A65FA007E8B5B /* JumpStarView.m */,
 			);
 			path = "JumpStarDemo(星跳)";
 			sourceTree = "<group>";
@@ -471,6 +476,7 @@
 				04F430FA1C990ED40033E4A3 /* DynamicSlideController.m in Sources */,
 				04F431131C9911250033E4A3 /* RootTableTableViewController.m in Sources */,
 				8C17D80C1C992C840071FB43 /* TwitterMaskViewController.m in Sources */,
+				2F5E72121C9A65FA007E8B5B /* JumpStarView.m in Sources */,
 				04F431101C990FA00033E4A3 /* BottomBarViewController.m in Sources */,
 				04F430BB1C990A800033E4A3 /* main.m in Sources */,
 				04F431231C9968780033E4A3 /* JumpStarViewController.m in Sources */,
