@@ -37,13 +37,13 @@
 #pragma mark - 私有方法
 //轻触事件，变更视图为进度条视样式
 -(void)tapped:(UITapGestureRecognizer *)tapped{
+    //纪录原始的frame
+    _originframe = self.frame;
     
     //判断是否在正在尽享动画
     if (_animating == YES) {
         return;
     }
-    //纪录原始的frame
-    _originframe = self.frame;
     
     //    初始化
     //移除之前的所有动画
@@ -105,6 +105,41 @@
     [self.layer addSublayer:progressLayer];
 }
 
+//画对号
+-(void)checkAnimation{
+    
+    CAShapeLayer *checkLayer = [CAShapeLayer layer];
+    
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    
+    CGRect rectInCircle = CGRectInset(self.bounds, self.bounds.size.width*(1-1/sqrt(2.0))/2, self.bounds.size.width*(1-1/sqrt(2.0))/2);
+    [path moveToPoint:CGPointMake(rectInCircle.origin.x + rectInCircle.size.width/9, rectInCircle.origin.y + rectInCircle.size.height*2/3)];
+    
+    [path addLineToPoint:CGPointMake(rectInCircle.origin.x + rectInCircle.size.width/3,rectInCircle.origin.y + rectInCircle.size.height*9/10)];
+    [path addLineToPoint:CGPointMake(rectInCircle.origin.x + rectInCircle.size.width*8/10, rectInCircle.origin.y + rectInCircle.size.height*2/10)];
+    
+    checkLayer.path = path.CGPath;
+    //填充色
+    checkLayer.fillColor = [UIColor clearColor].CGColor;
+    //    线色
+    checkLayer.strokeColor = [UIColor whiteColor].CGColor;
+    checkLayer.lineWidth = 10.0;
+    //    线帽
+    checkLayer.lineCap = kCALineCapRound;
+    //    拐角
+    checkLayer.lineJoin = kCALineJoinRound;
+    [self.layer addSublayer:checkLayer];
+    
+    CABasicAnimation *checkAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    checkAnimation.duration = 0.3f;
+    checkAnimation.fromValue = @(0.0f);
+    checkAnimation.toValue = @(1.0f);
+    checkAnimation.delegate = self;
+    [checkLayer addAnimation:checkAnimation forKey:nil];
+    
+}
+
+
 #pragma mark - 动画代理方法
 //动画开始
 -(void)animationDidStart:(CAAnimation *)anim{
@@ -135,9 +170,11 @@
             self.backgroundColor = [UIColor colorWithRed:0.1803921568627451 green:0.8 blue:0.44313725490196076 alpha:1.0];
         } completion:^(BOOL finished) {
             [self.layer removeAllAnimations];
+            [self checkAnimation];
+            _animating = NO;
         }];
     }
-
+    
 }
 //动画结束
 -(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
