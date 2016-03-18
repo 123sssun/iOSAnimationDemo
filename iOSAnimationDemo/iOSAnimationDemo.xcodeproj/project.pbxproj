@@ -24,10 +24,16 @@
 		04F431101C990FA00033E4A3 /* BottomBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4310F1C990FA00033E4A3 /* BottomBarViewController.m */; };
 		04F431131C9911250033E4A3 /* RootTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F431121C9911250033E4A3 /* RootTableTableViewController.m */; };
 		04F431171C9954F40033E4A3 /* SmoothGestureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F431161C9954F40033E4A3 /* SmoothGestureController.m */; };
-		04F4311F1C9965BB0033E4A3 /* PullDownController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4311E1C9965BB0033E4A3 /* PullDownController.m */; };
 		04F431231C9968780033E4A3 /* JumpStarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F431221C9968780033E4A3 /* JumpStarViewController.m */; };
 		04F431291C99B0D60033E4A3 /* ThreeDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F431271C99B0D60033E4A3 /* ThreeDView.m */; };
 		2F5E72121C9A65FA007E8B5B /* JumpStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E72111C9A65FA007E8B5B /* JumpStarView.m */; };
+		42C640761C9C4ED5008D59A1 /* CurveLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C640691C9C4ED5008D59A1 /* CurveLayer.m */; };
+		42C640771C9C4ED5008D59A1 /* CurveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C6406B1C9C4ED5008D59A1 /* CurveView.m */; };
+		42C640781C9C4ED5008D59A1 /* KYPullToCurveVeiw_footer.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C6406D1C9C4ED5008D59A1 /* KYPullToCurveVeiw_footer.m */; };
+		42C640791C9C4ED5008D59A1 /* KYPullToCurveVeiw.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C6406F1C9C4ED5008D59A1 /* KYPullToCurveVeiw.m */; };
+		42C6407A1C9C4ED5008D59A1 /* LabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C640711C9C4ED5008D59A1 /* LabelView.m */; };
+		42C6407B1C9C4ED5008D59A1 /* PullDownController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C640731C9C4ED5008D59A1 /* PullDownController.m */; };
+		42C6407C1C9C4ED5008D59A1 /* UIView+Convenient.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C640751C9C4ED5008D59A1 /* UIView+Convenient.m */; };
 		46F889A41C9AEAD5002AA5F5 /* SmoothView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F889A31C9AEAD5002AA5F5 /* SmoothView.m */; };
 		8C0417771C9C390A00BB33BB /* PingInvertTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0417761C9C390A00BB33BB /* PingInvertTransition.m */; };
 		8C04177A1C9C391100BB33BB /* PingTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0417791C9C391000BB33BB /* PingTransition.m */; };
@@ -108,14 +114,26 @@
 		04F431121C9911250033E4A3 /* RootTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableTableViewController.m; sourceTree = "<group>"; };
 		04F431151C9954F40033E4A3 /* SmoothGestureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothGestureController.h; sourceTree = "<group>"; };
 		04F431161C9954F40033E4A3 /* SmoothGestureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmoothGestureController.m; sourceTree = "<group>"; };
-		04F4311D1C9965BB0033E4A3 /* PullDownController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullDownController.h; sourceTree = "<group>"; };
-		04F4311E1C9965BB0033E4A3 /* PullDownController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullDownController.m; sourceTree = "<group>"; };
 		04F431211C9968780033E4A3 /* JumpStarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpStarViewController.h; sourceTree = "<group>"; };
 		04F431221C9968780033E4A3 /* JumpStarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpStarViewController.m; sourceTree = "<group>"; };
 		04F431271C99B0D60033E4A3 /* ThreeDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeDView.m; sourceTree = "<group>"; };
 		04F431281C99B0D60033E4A3 /* ThreeDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeDView.h; sourceTree = "<group>"; };
 		2F5E72101C9A65FA007E8B5B /* JumpStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpStarView.h; sourceTree = "<group>"; };
 		2F5E72111C9A65FA007E8B5B /* JumpStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpStarView.m; sourceTree = "<group>"; };
+		42C640681C9C4ED5008D59A1 /* CurveLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurveLayer.h; sourceTree = "<group>"; };
+		42C640691C9C4ED5008D59A1 /* CurveLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurveLayer.m; sourceTree = "<group>"; };
+		42C6406A1C9C4ED5008D59A1 /* CurveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurveView.h; sourceTree = "<group>"; };
+		42C6406B1C9C4ED5008D59A1 /* CurveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurveView.m; sourceTree = "<group>"; };
+		42C6406C1C9C4ED5008D59A1 /* KYPullToCurveVeiw_footer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYPullToCurveVeiw_footer.h; sourceTree = "<group>"; };
+		42C6406D1C9C4ED5008D59A1 /* KYPullToCurveVeiw_footer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYPullToCurveVeiw_footer.m; sourceTree = "<group>"; };
+		42C6406E1C9C4ED5008D59A1 /* KYPullToCurveVeiw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYPullToCurveVeiw.h; sourceTree = "<group>"; };
+		42C6406F1C9C4ED5008D59A1 /* KYPullToCurveVeiw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYPullToCurveVeiw.m; sourceTree = "<group>"; };
+		42C640701C9C4ED5008D59A1 /* LabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelView.h; sourceTree = "<group>"; };
+		42C640711C9C4ED5008D59A1 /* LabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelView.m; sourceTree = "<group>"; };
+		42C640721C9C4ED5008D59A1 /* PullDownController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullDownController.h; sourceTree = "<group>"; };
+		42C640731C9C4ED5008D59A1 /* PullDownController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullDownController.m; sourceTree = "<group>"; };
+		42C640741C9C4ED5008D59A1 /* UIView+Convenient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Convenient.h"; sourceTree = "<group>"; };
+		42C640751C9C4ED5008D59A1 /* UIView+Convenient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Convenient.m"; sourceTree = "<group>"; };
 		46F889A21C9AEAD5002AA5F5 /* SmoothView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothView.h; sourceTree = "<group>"; };
 		46F889A31C9AEAD5002AA5F5 /* SmoothView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmoothView.m; sourceTree = "<group>"; };
 		8C0417751C9C390A00BB33BB /* PingInvertTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingInvertTransition.h; sourceTree = "<group>"; };
@@ -391,8 +409,20 @@
 		04F4311C1C9965A30033E4A3 /* PullDownController(下拉刷新) */ = {
 			isa = PBXGroup;
 			children = (
-				04F4311D1C9965BB0033E4A3 /* PullDownController.h */,
-				04F4311E1C9965BB0033E4A3 /* PullDownController.m */,
+				42C640681C9C4ED5008D59A1 /* CurveLayer.h */,
+				42C640691C9C4ED5008D59A1 /* CurveLayer.m */,
+				42C6406A1C9C4ED5008D59A1 /* CurveView.h */,
+				42C6406B1C9C4ED5008D59A1 /* CurveView.m */,
+				42C6406C1C9C4ED5008D59A1 /* KYPullToCurveVeiw_footer.h */,
+				42C6406D1C9C4ED5008D59A1 /* KYPullToCurveVeiw_footer.m */,
+				42C6406E1C9C4ED5008D59A1 /* KYPullToCurveVeiw.h */,
+				42C6406F1C9C4ED5008D59A1 /* KYPullToCurveVeiw.m */,
+				42C640701C9C4ED5008D59A1 /* LabelView.h */,
+				42C640711C9C4ED5008D59A1 /* LabelView.m */,
+				42C640721C9C4ED5008D59A1 /* PullDownController.h */,
+				42C640731C9C4ED5008D59A1 /* PullDownController.m */,
+				42C640741C9C4ED5008D59A1 /* UIView+Convenient.h */,
+				42C640751C9C4ED5008D59A1 /* UIView+Convenient.m */,
 			);
 			path = "PullDownController(下拉刷新)";
 			sourceTree = "<group>";
@@ -619,6 +649,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46F889A41C9AEAD5002AA5F5 /* SmoothView.m in Sources */,
+				42C640761C9C4ED5008D59A1 /* CurveLayer.m in Sources */,
 				D08FA12B1C9A8F7E00E2701E /* FireworkButton.m in Sources */,
 				8C0417C11C9C399F00BB33BB /* POPPropertyAnimation.mm in Sources */,
 				8C0417B41C9C399F00BB33BB /* POPAnimation.mm in Sources */,
@@ -628,6 +659,7 @@
 				8C0417C41C9C399F00BB33BB /* TransformationMatrix.cpp in Sources */,
 				C2AB927B1C9A60BF00F269AF /* ProgressView.m in Sources */,
 				8C17D80F1C992CEE0071FB43 /* MaskTransitionViewController.m in Sources */,
+				42C6407C1C9C4ED5008D59A1 /* UIView+Convenient.m in Sources */,
 				04F430F71C990E9B0033E4A3 /* CardImageViewController.m in Sources */,
 				04F4310C1C990F530033E4A3 /* SnowViewController.m in Sources */,
 				04F431091C990F420033E4A3 /* SlideMenuViewController.m in Sources */,
@@ -636,14 +668,16 @@
 				04F430BE1C990A800033E4A3 /* AppDelegate.m in Sources */,
 				8C0417C31C9C399F00BB33BB /* POPVector.mm in Sources */,
 				8C0417BA1C9C399F00BB33BB /* POPBasicAnimation.mm in Sources */,
+				42C6407A1C9C4ED5008D59A1 /* LabelView.m in Sources */,
 				8C0417C01C9C399F00BB33BB /* POPMath.mm in Sources */,
 				04F431001C990F070033E4A3 /* MaskViewController.m in Sources */,
-				04F4311F1C9965BB0033E4A3 /* PullDownController.m in Sources */,
 				8C0417771C9C390A00BB33BB /* PingInvertTransition.m in Sources */,
 				8C0417BC1C9C399F00BB33BB /* POPCustomAnimation.mm in Sources */,
+				42C640781C9C4ED5008D59A1 /* KYPullToCurveVeiw_footer.m in Sources */,
 				04F430FD1C990EF50033E4A3 /* FireworkViewController.m in Sources */,
 				8C0417BF1C9C399F00BB33BB /* POPLayerExtras.mm in Sources */,
 				04F431131C9911250033E4A3 /* RootTableTableViewController.m in Sources */,
+				42C640791C9C4ED5008D59A1 /* KYPullToCurveVeiw.m in Sources */,
 				8C17D80C1C992C840071FB43 /* TwitterMaskViewController.m in Sources */,
 				2F5E72121C9A65FA007E8B5B /* JumpStarView.m in Sources */,
 				04F431101C990FA00033E4A3 /* BottomBarViewController.m in Sources */,
@@ -654,6 +688,8 @@
 				8C0417C21C9C399F00BB33BB /* POPSpringAnimation.mm in Sources */,
 				8C0417BB1C9C399F00BB33BB /* POPCGUtils.mm in Sources */,
 				04F431031C990F1B0033E4A3 /* ProgressViewController.m in Sources */,
+				42C640771C9C4ED5008D59A1 /* CurveView.m in Sources */,
+				42C6407B1C9C4ED5008D59A1 /* PullDownController.m in Sources */,
 				8C0417B51C9C399F00BB33BB /* POPAnimationEvent.mm in Sources */,
 				8C0417BD1C9C399F00BB33BB /* POPDecayAnimation.mm in Sources */,
 				8C0417B81C9C399F00BB33BB /* POPAnimationTracer.mm in Sources */,
