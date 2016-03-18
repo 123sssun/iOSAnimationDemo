@@ -33,7 +33,7 @@
     [self.view addSubview:self.progressSlider];
     [self.progressSlider addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
     self.progressSlider.value = 0.5;
-    
+
     self.resetButton = [[UIButton alloc] init];
     [self.view addSubview:self.resetButton];
     [self.resetButton setTitle:@"重置皮球形状" forState:UIControlStateNormal];
@@ -41,8 +41,11 @@
     [self.resetButton addTarget:self action:@selector(clickButton) forControlEvents:UIControlEventTouchUpInside];
     [self.resetButton sizeToFit];
     self.resetButton.center = CGPointMake(self.view.center.x, self.view.center.y + 200);
-    
+
     self.rubberView = [[RubberBallView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 320/2, self.view.frame.size.height/2 - 320/2, 320, 320)];
+    
+//    self.rubberView = [[RubberBallView alloc] init];
+    
     [self.view addSubview:self.rubberView];
     self.rubberView.rubberBallLayer.progress = self.progressSlider.value;
     
