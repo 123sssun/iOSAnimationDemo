@@ -45,7 +45,7 @@
     self.bgImageView.layer.mask.position = self.view.center;
     self.bgImageView.layer.mask.bounds = CGRectMake( 0, 0, 80,80);
     //    6.延迟执行动画
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self animation];
     });
     
