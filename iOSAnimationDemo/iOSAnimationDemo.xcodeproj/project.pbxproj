@@ -60,6 +60,8 @@
 		8C17D80F1C992CEE0071FB43 /* MaskTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D80E1C992CEE0071FB43 /* MaskTransitionViewController.m */; };
 		C2AB927B1C9A60BF00F269AF /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AB927A1C9A60BF00F269AF /* ProgressView.m */; };
 		D08FA12B1C9A8F7E00E2701E /* FireworkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D08FA12A1C9A8F7E00E2701E /* FireworkButton.m */; };
+		E43EE0C11C9C464A003611F3 /* RubberBallView.m in Sources */ = {isa = PBXBuildFile; fileRef = E43EE0BE1C9C464A003611F3 /* RubberBallView.m */; };
+		E43EE0C21C9C464A003611F3 /* RubbleBallLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E43EE0C01C9C464A003611F3 /* RubbleBallLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +203,10 @@
 		C2AB927A1C9A60BF00F269AF /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 		D08FA1291C9A8F7E00E2701E /* FireworkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireworkButton.h; sourceTree = "<group>"; };
 		D08FA12A1C9A8F7E00E2701E /* FireworkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireworkButton.m; sourceTree = "<group>"; };
+		E43EE0BD1C9C464A003611F3 /* RubberBallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RubberBallView.h; sourceTree = "<group>"; };
+		E43EE0BE1C9C464A003611F3 /* RubberBallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RubberBallView.m; sourceTree = "<group>"; };
+		E43EE0BF1C9C464A003611F3 /* RubbleBallLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RubbleBallLayer.h; sourceTree = "<group>"; };
+		E43EE0C01C9C464A003611F3 /* RubbleBallLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RubbleBallLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,6 +368,7 @@
 		04F430F21C990DD50033E4A3 /* RubberBall(小皮球) */ = {
 			isa = PBXGroup;
 			children = (
+				E43EE0BC1C9C464A003611F3 /* RubbleBallView */,
 				04F431041C990F290033E4A3 /* RubberBallViewController.h */,
 				04F431051C990F290033E4A3 /* RubberBallViewController.m */,
 			);
@@ -515,6 +522,17 @@
 			path = WebCore;
 			sourceTree = "<group>";
 		};
+		E43EE0BC1C9C464A003611F3 /* RubbleBallView */ = {
+			isa = PBXGroup;
+			children = (
+				E43EE0BD1C9C464A003611F3 /* RubberBallView.h */,
+				E43EE0BE1C9C464A003611F3 /* RubberBallView.m */,
+				E43EE0BF1C9C464A003611F3 /* RubbleBallLayer.h */,
+				E43EE0C01C9C464A003611F3 /* RubbleBallLayer.m */,
+			);
+			path = RubbleBallView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -664,6 +682,7 @@
 				04F4310C1C990F530033E4A3 /* SnowViewController.m in Sources */,
 				04F431091C990F420033E4A3 /* SlideMenuViewController.m in Sources */,
 				04F431171C9954F40033E4A3 /* SmoothGestureController.m in Sources */,
+				E43EE0C11C9C464A003611F3 /* RubberBallView.m in Sources */,
 				8C0417B31C9C399F00BB33BB /* POPAnimatableProperty.mm in Sources */,
 				04F430BE1C990A800033E4A3 /* AppDelegate.m in Sources */,
 				8C0417C31C9C399F00BB33BB /* POPVector.mm in Sources */,
@@ -687,6 +706,7 @@
 				8C04177D1C9C392B00BB33BB /* TransToViewController.m in Sources */,
 				8C0417C21C9C399F00BB33BB /* POPSpringAnimation.mm in Sources */,
 				8C0417BB1C9C399F00BB33BB /* POPCGUtils.mm in Sources */,
+				E43EE0C21C9C464A003611F3 /* RubbleBallLayer.m in Sources */,
 				04F431031C990F1B0033E4A3 /* ProgressViewController.m in Sources */,
 				42C640771C9C4ED5008D59A1 /* CurveView.m in Sources */,
 				42C6407B1C9C4ED5008D59A1 /* PullDownController.m in Sources */,
