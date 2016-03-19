@@ -43,7 +43,7 @@
     
     //    4.添加遮罩层
     self.bgImageView.layer.mask.position = self.view.center;
-    self.bgImageView.layer.mask.bounds = CGRectMake( 0, 0, 80,80);
+    self.bgImageView.layer.mask.bounds = CGRectMake( 0, 0, 100,100);
     //    6.延迟执行动画
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self animation];
@@ -60,7 +60,7 @@
     transformAnimation.delegate  =self;
     
     //5.2遮罩层执行时间
-    transformAnimation.duration = 1;
+    transformAnimation.duration = 2;
     
     //5.3设置所有延时的地方统一时间
     CGFloat delayTime = 0.8;
@@ -70,7 +70,7 @@
     
     //5.5设置初始大小 ，过渡大小 ，最终大小
     NSValue *initalBounds = [NSValue valueWithCGRect:self.bgImageView.layer.mask.bounds];
-    NSValue *secondBounds = [NSValue valueWithCGRect:CGRectMake(0, 0, 50, 50)];
+    NSValue *secondBounds = [NSValue valueWithCGRect:CGRectMake(0, 0, 75, 75)];
     NSValue *finalBounds = [NSValue valueWithCGRect:CGRectMake(0, 0, 1800, 1800)];
     
     transformAnimation.values = @[initalBounds,secondBounds,finalBounds];
@@ -93,16 +93,16 @@
      *  animateWithDuration : 执行时间
      *  delay :执行前的延迟时间
      */
-    [UIView animateWithDuration:0.25 delay:delayTime options:UIViewAnimationOptionTransitionNone animations:^{
-        self.bgImageView.transform = CGAffineTransformMakeScale(1.1, 1.1);
+    [UIView animateWithDuration:0.5 delay:delayTime options:UIViewAnimationOptionTransitionNone animations:^{
+        self.bgImageView.transform = CGAffineTransformMakeScale(1.05, 1.05);
     } completion:^(BOOL finished) {
-        [UIView animateWithDuration:0.6 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        [UIView animateWithDuration:1.3 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             self.bgImageView.transform = CGAffineTransformIdentity;
         } completion:nil];
     }];
     
     //    5.11中间背景View的淡出动画
-    [UIView animateWithDuration:1.0 delay:delayTime options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:2 delay:delayTime options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.whiteView.alpha = 0.0;
     } completion:^(BOOL finished){
         [self.whiteView removeFromSuperview];
