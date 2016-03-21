@@ -93,7 +93,7 @@
         fireworkCell.alphaSpeed = -0.8; //alpha递减速度 每秒 即每秒alpha值减一
         fireworkCell.lifetime = 0.8;        //生命时间即从出现到消失有多久
         fireworkCell.lifetimeRange = 0.3; //发射时 cell个体间的差异区间
-        fireworkCell.birthRate = 500;       //每秒钟产生的个数
+        fireworkCell.birthRate = 200;       //每秒钟产生的个数
         fireworkCell.velocity = 40.00;    //移动速度
         fireworkCell.velocityRange = 10.00;//移动速度差异区间
         //不用256 因为白的没效果
