@@ -14,7 +14,7 @@
 @interface KYPullToCurveVeiw_footer()
 
 @property(nonatomic,assign)CGFloat progress;
-@property (nonatomic,weak)UIScrollView *associatedScrollView;
+@property (nonatomic,strong) UIScrollView *associatedScrollView;
 @property (nonatomic,copy)void(^refreshingBlock)(void);
 
 @end
@@ -165,7 +165,6 @@
             self.progress = MAX(0.0, MIN((contentOffset.y - (contentSize.height - self.associatedScrollView.height)) / self.pullDistance, 1.0));
         }
     }
-    
 }
 
 

@@ -49,6 +49,7 @@
     return self;
 }
 
+
 -(void)setProgress:(CGFloat)progress{
     if (!self.associatedScrollView.tracking) {
         labelView.loading = YES;

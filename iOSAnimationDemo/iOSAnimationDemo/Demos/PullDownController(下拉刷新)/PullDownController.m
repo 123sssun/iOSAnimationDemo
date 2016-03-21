@@ -22,10 +22,7 @@ static NSString * const reuseID = @"animationCurve";
 
 @end
 
-@implementation PullDownController{
-    UILabel *navTitle;
-    UIView *bkView;
-}
+@implementation PullDownController
 
 - (void)loadView {
     UITableView *tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
@@ -39,32 +36,7 @@ static NSString * const reuseID = @"animationCurve";
     [super viewDidLoad];
     CGFloat x = random() % 254 + 1.0;
     self.view.backgroundColor = [UIColor colorWithRed:x / 255.0 green:255.0 / 255.0 blue:255.0 / 255.0 alpha:1.0];
-    
-    bkView = [[UIView alloc]init];
-    bkView.center = CGPointMake(self.view.center.x, 22);
-    bkView.bounds = CGRectMake(0, 0, 250, 44);
-    bkView.clipsToBounds = YES;
-    [self.navigationController.navigationBar addSubview:bkView];
-    
-    navTitle = [[UILabel alloc]initWithFrame:CGRectMake(0, 44+initialOffset,bkView.frame.size.width, 44)];
-    navTitle.alpha = 0;
-    navTitle.textAlignment = NSTextAlignmentCenter;
-    navTitle.textColor = [UIColor blackColor];
-    navTitle.text = @"Fade in/out navbar title";
-    [bkView addSubview:navTitle];
-    
-}
-
--(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    CGFloat transitionY = MIN(MAX(0, scrollView.contentOffset.y+64), 44+initialOffset+targetHeight);
-    NSLog(@"%f",transitionY);
-    if (transitionY <= initialOffset) {
-        navTitle.frame = CGRectMake(0, 44+initialOffset-transitionY,bkView.frame.size.width , 44);
-    }else{
-        CGFloat factor = MAX(0, MIN(1, (transitionY-initialOffset)/targetHeight));
-        navTitle.frame = CGRectMake(0, 44-factor*44,bkView.frame.size.width , 44);
-        navTitle.alpha = factor*factor*1;
-    }
+    self.navigationItem.title = @"Fade in/out";
     
 }
 
@@ -72,7 +44,6 @@ static NSString * const reuseID = @"animationCurve";
     [super viewWillAppear:animated];
     
     KYPullToCurveVeiw *headerView = [[KYPullToCurveVeiw alloc]initWithAssociatedScrollView:self.tableView withNavigationBar:YES];
-    
     __weak KYPullToCurveVeiw *weakHeaderView = headerView;
     
     [headerView triggerPulling];
@@ -87,7 +58,6 @@ static NSString * const reuseID = @"animationCurve";
     }];
     
     KYPullToCurveVeiw_footer *footerView = [[KYPullToCurveVeiw_footer alloc]initWithAssociatedScrollView:self.tableView withNavigationBar:YES];
-    
     __weak KYPullToCurveVeiw_footer *weakFooterView= footerView;
     
     [footerView addRefreshingBlock:^{
@@ -113,4 +83,5 @@ static NSString * const reuseID = @"animationCurve";
     testCell.textLabel.text = [NSString stringWithFormat:@"第%ld条", indexPath.row];
     return testCell;
 }
+
 @end
